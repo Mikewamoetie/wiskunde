@@ -1,0 +1,40 @@
+using System;
+
+namespace Wiskunde
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            design();
+
+            Console.WriteLine("Vul het eerste getal van de liniare formule in.");
+            string firststring = Console.ReadLine();
+
+            Console.WriteLine("vul nu het derde getal in.");
+            string secondstring = Console.ReadLine();
+
+            Console.WriteLine(" ");
+
+            double firstFloat = Convert.ToDouble(firststring);
+            double secondFloat = Convert.ToDouble(secondstring);
+
+            int j = 0;
+
+            for (int i = 0; i < 21; i++)
+            {
+                Console.WriteLine(firstFloat * j + secondFloat + "     " + i);
+                j++;
+            }
+           
+            Console.ReadKey();
+        }
+
+        static void design()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Title = "Liniare formules";
+            Console.WindowHeight = 40;
+        }
+    }
+}
